@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+spring:
+ jpa: 
+#  database: mysql 
+# generate-ddl: true
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  show-sql: true
+  hibernate:    
+#    ddl-auto: create
+ datasource:
+#   jndi-name: jdbc/mySQL
+     initialize: false
+     url: jdbc:mysql://localhost/db_springboot_backend_inv?useSSL=false&serverTimezone=UTC
+     username: root
+     password: sistemas123
+         
+ jackson:
+  time-zone: America/Santiago
+  locale: es_CL    
+ servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+#     url: jdbc:mysql://localhost/db_springboot_backend_inv?useSSL=false&serverTimezone=UTC
+#     username: root
+#     password: sistemas123                     

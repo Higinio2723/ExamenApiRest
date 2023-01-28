@@ -1,0 +1,56 @@
+
+t
+java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ
+t
+java:S2293F"YReplace the type specification in this constructor call with the diamond operator ("<>").(þàßïÿÿÿÿÿ
+o
+java:S2293I"YReplace the type specification in this constructor call with the diamond operator ("<>").(Î†Â‚
+t
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(®©ÎÒûÿÿÿÿ
+t
+java:S2293c"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ
+n
+java:S2293h"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°åY
+t
+java:S2293}"YReplace the type specification in this constructor call with the diamond operator ("<>").(®©ÎÒûÿÿÿÿ
+u
+java:S2293ƒ"YReplace the type specification in this constructor call with the diamond operator ("<>").(þàßïÿÿÿÿÿ
+u
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ
+o
+java:S2293™"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°åY
+u
+java:S2293¬"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ
+p
+java:S2293±"YReplace the type specification in this constructor call with the diamond operator ("<>").(À”¨â
+u
+java:S2293Ã"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ
+o
+java:S2293Ó"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°åY
+p
+java:S2293ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(Äå¨Ð
+a
+java:S1192@"FDefine a constant instead of duplicating this literal "error" 5 times.(ÕÓçòûÿÿÿÿ
+^
+java:S1192g"HDefine a constant instead of duplicating this literal "cliente" 3 times.(æÔà§
+_
+java:S1192?"IDefine a constant instead of duplicating this literal "mensaje" 11 times.(¯×î»
+d
+java:S2259b"IA "NullPointerException" could be thrown; "getMessage()" can return null.(ÕÓçòûÿÿÿÿ
+e
+java:S2259’"IA "NullPointerException" could be thrown; "getMessage()" can return null.(ÕÓçòûÿÿÿÿ
+d
+java:S2259@"IA "NullPointerException" could be thrown; "getMessage()" can return null.(ÕÓçòûÿÿÿÿ
+e
+java:S2259«"IA "NullPointerException" could be thrown; "getMessage()" can return null.(ÕÓçòûÿÿÿÿ
+V	java:S125("<This block of commented-out lines of code should be removed.(¸ûßÚýÿÿÿÿ
+<
+java:S14527"&Remove usage of generic wildcard type.(§óóÑ
+A
+java:S1452N"&Remove usage of generic wildcard type.(Ì¦é’ûÿÿÿÿ
+<
+java:S1452m"&Remove usage of generic wildcard type.(Å¡ÖÖ
+=
+java:S1452ž"&Remove usage of generic wildcard type.(ˆŸ‚»
+B
+java:S1452¶"&Remove usage of generic wildcard type.(à¿×ÿûÿÿÿÿ

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springboot-backend-apirest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>springboot-backend-apirest</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="clientes-apirest-1.0.0.war">
+      <element id="artifact" artifact-name="springboot-backend-apirest:war exploded" />
+    </root>
+  </artifact>
+</component>

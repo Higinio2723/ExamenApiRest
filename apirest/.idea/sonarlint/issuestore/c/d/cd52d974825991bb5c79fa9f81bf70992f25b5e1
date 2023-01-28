@@ -1,0 +1,9 @@
+
+R
+java:S2629#"7Use the built-in formatting to construct this argument.(ıºÿÿÿÿÿ
+\
+java:S3457#"AFormat specifiers should be used instead of string concatenation.(ıºÿÿÿÿÿ
+C
+java:S3864*"!Remove this use of "Stream.peek".(çÆŸÅûÿÿÿÿ8“ú“È0
+c
+java:S3457*"AFormat specifiers should be used instead of string concatenation.(çÆŸÅûÿÿÿÿ8Èú“È0
