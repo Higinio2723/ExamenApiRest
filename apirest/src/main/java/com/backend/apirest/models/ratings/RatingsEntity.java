@@ -21,8 +21,9 @@ import java.util.Date;
 @Table(name="t_calificaciones")
 public class RatingsEntity implements Serializable {
     @Id
-    @Column(name = "id_t_calificaciones", columnDefinition = "serial")
-    @Generated(GenerationTime.INSERT)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_t_calificaciones",unique=true, nullable = false)
     private Integer id;
 
     @ManyToOne()
@@ -39,6 +40,11 @@ public class RatingsEntity implements Serializable {
 
     @Column(name = "fecha_registro")
     private Date registrationDate;
+
+    @PrePersist
+    public void prePersist(){
+        registrationDate = new Date();
+    }
 
 
 

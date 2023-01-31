@@ -14,6 +14,8 @@ public interface IRatingsService {
 
     boolean existById(Integer id);
 
-    void edit(RatingsDataDto id);
+    void edit(RatingsDataDto ratingsDataDto);
+
+    void save(RatingsDataDto ratingsDataDto);
 
 }
