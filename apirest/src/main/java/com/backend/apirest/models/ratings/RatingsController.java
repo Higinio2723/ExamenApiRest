@@ -33,17 +33,22 @@ public class RatingsController {
 
         List<RatingDto> ratings = ratingsService.findByIdStudent(idStudent);
 
-        AtomicReference<Double> average = new AtomicReference<>(0.0);
+
+
+        AtomicReference<Double> sumRatings = new AtomicReference<>(0.0);
 
         ratings.forEach(data -> {
-            average.set(average.get() + data.getCalificacion());
+            sumRatings.set(sumRatings.get() + data.getCalificacion());
         });
 
-        logger.info("####################### average {}",average);
+        logger.info("####################### average {}",sumRatings);
+
+        double  average = sumRatings.get()/ratings.size();
+
 
         result = new ResponseEntity<>(RatingGeneralDto.builder()
                 .listData(ratings)
-                .promedio(average.get())
+                .promedio(average)
                 .build(), HttpStatus.OK);
 
         return result;

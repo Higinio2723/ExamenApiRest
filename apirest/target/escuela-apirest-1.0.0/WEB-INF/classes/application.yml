@@ -1,0 +1,25 @@
+server:
+  port: 8083
+  error:
+    include-stacktrace: never
+spring:
+ jpa: 
+#  database: postgres
+# generate-ddl: true
+  driverClassName: org.postgresql.Driver
+  show-sql: true
+  hibernate:    
+#    ddl-auto: create
+ datasource:
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5432/school_system
+    username: hgonzalez
+    password: sistemas123
+    continueOnError: true
+
+
+
+ servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
