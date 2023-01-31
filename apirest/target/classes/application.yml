@@ -1,31 +1,25 @@
 server:
-  port: 8080
+  port: 8083
   error:
     include-stacktrace: never
 spring:
  jpa: 
-#  database: mysql 
+#  database: postgres
 # generate-ddl: true
-  driver-class-name: com.mysql.cj.jdbc.Driver
-  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  driverClassName: org.postgresql.Driver
   show-sql: true
   hibernate:    
 #    ddl-auto: create
  datasource:
-#   jndi-name: jdbc/mySQL
-     initialize: false
-     url: jdbc:mysql://localhost/db_springboot_backend_inv?useSSL=false&serverTimezone=UTC
-     username: root
-     password: sistemas123
-         
- jackson:
-  time-zone: America/Santiago
-  locale: es_CL    
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5432/school_system
+    username: hgonzalez
+    password: sistemas123
+    continueOnError: true
+
+
+
  servlet:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
-
-#     url: jdbc:mysql://localhost/db_springboot_backend_inv?useSSL=false&serverTimezone=UTC
-#     username: root
-#     password: sistemas123                     
