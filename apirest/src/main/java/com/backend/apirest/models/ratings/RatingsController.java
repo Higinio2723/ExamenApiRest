@@ -52,16 +52,10 @@ public class RatingsController {
     public ResponseEntity<Object> deleteRatings( @PathVariable(name = "idRatings") Integer idRatings){
         ResponseEntity<Object> result = null;
 
-        boolean deleteData = ratingsService.delete(idRatings);
 
-        if(deleteData) {
-            result = new ResponseEntity<>(GeneralDto.builder()
-                    .success("ok")
-                    .msg("calificacion eliminada")
-                    .build(), HttpStatus.OK);
-        }else{
-            GenericResponse genericResponse ;
-            ResponseEntity<Object> response ;
+        if(ratingsService.existById(idRatings)){
+            GenericResponse genericResponse;
+            ResponseEntity<Object> response;
             List<String> messages = new ArrayList<>();
             messages.add("NOT_FOUND_RATING");
 
@@ -70,10 +64,20 @@ public class RatingsController {
                     .status(HttpStatus.NOT_FOUND.value())
                     .error("Not found")
                     .message(messages)
-                    .path("/ratings/"+idRatings)
+                    .path("/ratings/" + idRatings)
                     .build();
 
-            response = new ResponseEntity<>(genericResponse, HttpStatus.NOT_FOUND);
+            result = new ResponseEntity<>(genericResponse, HttpStatus.NOT_FOUND);
+
+        }else {
+
+            ratingsService.delete(idRatings);
+
+                result = new ResponseEntity<>(GeneralDto.builder()
+                        .success("ok")
+                        .msg("calificacion eliminada")
+                        .build(), HttpStatus.OK);
+
         }
         return result;
     }

@@ -25,11 +25,11 @@ public class RatingsEntity implements Serializable {
     @Generated(GenerationTime.INSERT)
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "id_t_materias", referencedColumnName = "id_t_materias ")
     private SubjectsEntity subject;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "id_t_usuarios", referencedColumnName = "id_t_usuarios")
     private StudentsEntity student;
 
