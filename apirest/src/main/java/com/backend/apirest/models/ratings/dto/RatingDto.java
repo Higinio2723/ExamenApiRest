@@ -17,4 +17,5 @@ public class RatingDto {
    private Double calificacion;
    private Date fecha_registro;
 
+
 }
