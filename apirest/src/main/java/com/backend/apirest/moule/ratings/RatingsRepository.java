@@ -1,7 +1,7 @@
-package com.backend.apirest.models.ratings;
+package com.backend.apirest.moule.ratings;
 
 
-import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.moule.ratings.dto.RatingDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

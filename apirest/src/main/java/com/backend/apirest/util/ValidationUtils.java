@@ -1,6 +1,6 @@
 package com.backend.apirest.util;
 
-import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.moule.ratings.dto.RatingDto;
 
 import java.sql.Timestamp;
 import java.util.List;

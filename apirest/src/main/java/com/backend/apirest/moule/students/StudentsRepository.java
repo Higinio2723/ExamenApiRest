@@ -1,4 +1,4 @@
-package com.backend.apirest.models.students;
+package com.backend.apirest.moule.students;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

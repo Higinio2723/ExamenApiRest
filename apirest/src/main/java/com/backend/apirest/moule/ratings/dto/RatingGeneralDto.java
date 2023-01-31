@@ -1,4 +1,4 @@
-package com.backend.apirest.models.ratings.dto;
+package com.backend.apirest.moule.ratings.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

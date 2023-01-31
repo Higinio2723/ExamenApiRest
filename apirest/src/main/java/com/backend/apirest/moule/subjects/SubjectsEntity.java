@@ -1,4 +1,4 @@
-package com.backend.apirest.models.students;
+package com.backend.apirest.moule.subjects;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,21 +15,15 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name="t_alumnos")
-public class StudentsEntity implements Serializable {
+@Table(name="t_materias")
+public class SubjectsEntity implements Serializable {
     @Id
-    @Column(name = "id_t_usuarios", columnDefinition = "serial")
+    @Column(name = "id_t_materias", columnDefinition = "serial")
     @Generated(GenerationTime.INSERT)
     private Integer id;
 
     @Column(nullable = false, name = "nombre" , length = 80)
     private String name;
-
-    @Column(nullable = false, name = "ap_paterno" , length = 80)
-    private String lastName;
-
-    @Column(nullable = false, name = "ap_materno" , length = 80)
-    private String secondLastName;
 
     @Column(nullable = false, name = "activo", columnDefinition="numeric(1)")
     private Integer enabled;
