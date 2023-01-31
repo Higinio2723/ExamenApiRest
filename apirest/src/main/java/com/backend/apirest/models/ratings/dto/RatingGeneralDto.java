@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class RatingGeneralDto {
 
-  private List<RatingDto> listData;
+  private List<RatingFormatDto> listData;
 
   private Double promedio;
 

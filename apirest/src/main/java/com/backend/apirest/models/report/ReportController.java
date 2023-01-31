@@ -1,8 +1,8 @@
 package com.backend.apirest.models.report;
 
-import com.backend.apirest.models.ratings.RatingsController;
 import com.backend.apirest.models.ratings.RatingsService;
 import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.util.ValidationUtils;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.slf4j.Logger;
@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,11 +36,14 @@ public class ReportController {
 		try {
 
 			List<RatingDto> ratings = ratingsService.findByIdStudent(idStudent);
+			double  average = ValidationUtils.getAverage(ratings);
+			logger.info("####################### average {}",average);
 
 			//dynamic parameters required for report
 			Map<String, Object> calParams = new HashMap<String, Object>();
 			calParams.put("CompanyName", "Universidad");
 			calParams.put("calificacionesData", new JRBeanCollectionDataSource(ratings));
+			calParams.put("promedio", average);
 
 			JasperPrint empReport =
 					JasperFillManager.fillReport

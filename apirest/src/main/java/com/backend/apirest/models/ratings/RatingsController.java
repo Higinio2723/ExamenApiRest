@@ -1,11 +1,13 @@
 package com.backend.apirest.models.ratings;
 
 import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.dto.RatingFormatDto;
 import com.backend.apirest.models.ratings.dto.RatingGeneralDto;
 import com.backend.apirest.models.ratings.dto.RatingsDataDto;
+import com.backend.apirest.util.FormatUtil;
 import com.backend.apirest.util.dto.GeneralDto;
 import com.backend.apirest.util.dto.GenericResponse;
-import com.backend.apirest.util.validation.ValidationUtils;
+import com.backend.apirest.util.ValidationUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 
 @RestController
 public class RatingsController {
@@ -32,23 +33,24 @@ public class RatingsController {
         ResponseEntity<Object> result = null;
 
         List<RatingDto> ratings = ratingsService.findByIdStudent(idStudent);
-
-
-
-        AtomicReference<Double> sumRatings = new AtomicReference<>(0.0);
+        List<RatingFormatDto> ratingFormatDtos = new ArrayList<>();
 
         ratings.forEach(data -> {
-            sumRatings.set(sumRatings.get() + data.getCalificacion());
+            String dataString = FormatUtil.formatDateToStrings(data.getFecha_registro());
+
+            ratingFormatDtos.add(RatingFormatDto.builder()
+                            .id_t_usuario(data.getId_t_usuario())
+                            .nombre(data.getNombre())
+                            .apellido(data.getApellido())
+                            .calificacion(data.getCalificacion())
+                            .fecha_registro(dataString)
+                    .build());
         });
-
-        logger.info("####################### average {}",sumRatings);
-
-        double  average = sumRatings.get()/ratings.size();
 
 
         result = new ResponseEntity<>(RatingGeneralDto.builder()
-                .listData(ratings)
-                .promedio(average)
+                .listData(ratingFormatDtos)
+                .promedio(ValidationUtils.getAverage(ratings))
                 .build(), HttpStatus.OK);
 
         return result;
