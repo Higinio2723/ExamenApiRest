@@ -25,11 +25,11 @@ public class RatingsEntity implements Serializable {
     @Generated(GenerationTime.INSERT)
     private Integer id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_t_materias", referencedColumnName = "id_t_materias ")
-    private SubjectsEntity rating;
+    private SubjectsEntity subject;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_t_usuarios", referencedColumnName = "id_t_usuarios")
     private StudentsEntity student;
 
@@ -38,7 +38,7 @@ public class RatingsEntity implements Serializable {
 
 
     @Column(name = "fecha_registro")
-    private Date lastModificationDate;
+    private Date registrationDate;
 
 
 
