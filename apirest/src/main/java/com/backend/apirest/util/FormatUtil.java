@@ -12,7 +12,7 @@ public class FormatUtil {
     public static String formatDateToStrings(Date inDate) {
         String pattern = "dd/MM/yyyy";
         SimpleDateFormat simpleDateFormat =new SimpleDateFormat(pattern);
-        String dateString = simpleDateFormat.format(new Date());
+        String dateString = simpleDateFormat.format(inDate);
         return dateString;
     }
 
