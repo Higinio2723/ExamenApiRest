@@ -42,6 +42,7 @@ public class RatingsController {
                             .id_t_usuario(data.getId_t_usuario())
                             .nombre(data.getNombre())
                             .apellido(data.getApellido())
+                            .materia(data.getMateria())
                             .calificacion(data.getCalificacion())
                             .fecha_registro(dataString)
                     .build());
