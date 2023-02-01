@@ -1,7 +1,7 @@
-package com.backend.apirest.moule.report;
+package com.backend.apirest.models.report;
 
-import com.backend.apirest.moule.ratings.RatingsService;
-import com.backend.apirest.moule.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.RatingsService;
+import com.backend.apirest.models.ratings.dto.RatingDto;
 import com.backend.apirest.util.ValidationUtils;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;

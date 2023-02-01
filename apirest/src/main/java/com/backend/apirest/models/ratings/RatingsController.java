@@ -1,9 +1,9 @@
-package com.backend.apirest.moule.ratings;
+package com.backend.apirest.models.ratings;
 
-import com.backend.apirest.moule.ratings.dto.RatingDto;
-import com.backend.apirest.moule.ratings.dto.RatingFormatDto;
-import com.backend.apirest.moule.ratings.dto.RatingGeneralDto;
-import com.backend.apirest.moule.ratings.dto.RatingsDataDto;
+import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.dto.RatingFormatDto;
+import com.backend.apirest.models.ratings.dto.RatingGeneralDto;
+import com.backend.apirest.models.ratings.dto.RatingsDataDto;
 import com.backend.apirest.util.FormatUtil;
 import com.backend.apirest.util.dto.GeneralDto;
 import com.backend.apirest.util.dto.GenericResponse;

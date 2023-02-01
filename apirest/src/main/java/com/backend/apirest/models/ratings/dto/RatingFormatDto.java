@@ -1,21 +1,19 @@
-package com.backend.apirest.moule.ratings.dto;
+package com.backend.apirest.models.ratings.dto;
 
 import lombok.*;
 
-import java.util.Date;
-
-@Getter
-@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RatingDto {
+@Data
+public class RatingFormatDto {
 
    private Integer id_t_usuario;
    private String nombre;
    private String apellido;
    private String materia;
    private Double calificacion;
-   private Date fecha_registro;
+   private String fecha_registro;
 
 
 }

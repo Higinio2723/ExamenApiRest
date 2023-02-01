@@ -1,7 +1,7 @@
-package com.backend.apirest.moule.ratings;
+package com.backend.apirest.models.ratings;
 
-import com.backend.apirest.moule.students.StudentsEntity;
-import com.backend.apirest.moule.subjects.SubjectsEntity;
+import com.backend.apirest.models.students.StudentsEntity;
+import com.backend.apirest.models.subjects.SubjectsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

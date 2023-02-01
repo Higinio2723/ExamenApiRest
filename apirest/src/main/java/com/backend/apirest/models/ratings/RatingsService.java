@@ -1,11 +1,11 @@
-package com.backend.apirest.moule.ratings;
+package com.backend.apirest.models.ratings;
 
-import com.backend.apirest.moule.ratings.dto.RatingDto;
-import com.backend.apirest.moule.ratings.dto.RatingsDataDto;
-import com.backend.apirest.moule.students.StudentsEntity;
-import com.backend.apirest.moule.students.StudentsRepository;
-import com.backend.apirest.moule.subjects.SubjectsEntity;
-import com.backend.apirest.moule.subjects.SubjectsRepository;
+import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.dto.RatingsDataDto;
+import com.backend.apirest.models.students.StudentsEntity;
+import com.backend.apirest.models.students.StudentsRepository;
+import com.backend.apirest.models.subjects.SubjectsEntity;
+import com.backend.apirest.models.subjects.SubjectsRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

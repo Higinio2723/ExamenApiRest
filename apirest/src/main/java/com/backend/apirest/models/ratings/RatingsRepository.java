@@ -1,7 +1,7 @@
-package com.backend.apirest.moule.ratings;
+package com.backend.apirest.models.ratings;
 
 
-import com.backend.apirest.moule.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.dto.RatingDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -13,7 +13,7 @@ import java.util.List;
 public interface RatingsRepository extends JpaRepository<RatingsEntity, Integer > {
 
 
-    @Query(value = "SELECT new com.backend.apirest.module.ratings.dto.RatingDto(" +
+    @Query(value = "SELECT new com.backend.apirest.models.ratings.dto.RatingDto(" +
             " s.id, s.name, s.lastName , su.name , " +
             " r.qualification , r.registrationDate) " +
             " FROM RatingsEntity r INNER JOIN StudentsEntity s ON (r.student.id = s.id " +

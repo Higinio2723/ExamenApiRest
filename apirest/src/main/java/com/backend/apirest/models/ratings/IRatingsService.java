@@ -1,8 +1,8 @@
-package com.backend.apirest.moule.ratings;
+package com.backend.apirest.models.ratings;
 
 
-import com.backend.apirest.moule.ratings.dto.RatingDto;
-import com.backend.apirest.moule.ratings.dto.RatingsDataDto;
+import com.backend.apirest.models.ratings.dto.RatingDto;
+import com.backend.apirest.models.ratings.dto.RatingsDataDto;
 
 import java.util.List;
 
