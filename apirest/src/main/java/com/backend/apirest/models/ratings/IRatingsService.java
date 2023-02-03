@@ -10,6 +10,7 @@ public interface IRatingsService {
 
     List<RatingDto> findByIdStudent(Integer id);
 
+    public List<RatingDto> findByAll();
     void delete(Integer id);
 
     boolean existById(Integer id);

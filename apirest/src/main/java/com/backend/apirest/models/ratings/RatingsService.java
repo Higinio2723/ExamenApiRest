@@ -35,6 +35,11 @@ public class RatingsService implements IRatingsService{
     }
 
     @Override
+    public List<RatingDto> findByAll() {
+        return ratingsRepository.findAllRatings();
+    }
+
+    @Override
     @Transactional
     public void delete(Integer id) {
         ratingsRepository.deleteById(id);
@@ -89,14 +94,6 @@ public class RatingsService implements IRatingsService{
                 .build();
 
         studentsRepository.save(studentData);
-
-//        SubjectsEntity subjectData = SubjectsEntity.builder()
-//                .name(ratingsDataDto.getMateria().getNombre())
-//                .enabled(1)
-//                .build();
-//
-//        subjectsRepository.save(subjectData);
-
         logger.info("################ studentData {}",studentData);
 
         RatingsEntity ratingsEntity = RatingsEntity.builder()

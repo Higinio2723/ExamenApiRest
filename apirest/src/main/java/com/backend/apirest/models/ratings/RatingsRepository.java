@@ -23,4 +23,12 @@ public interface RatingsRepository extends JpaRepository<RatingsEntity, Integer 
     )
     List<RatingDto> findAllByStudentId(@Param("idStudent") Integer idStudent);
 
+    @Query(value = "SELECT new com.backend.apirest.models.ratings.dto.RatingDto(" +
+            " r.id, s.id, s.name, s.lastName , su.name , " +
+            " r.qualification , r.registrationDate) " +
+            " FROM RatingsEntity r INNER JOIN StudentsEntity s ON (r.student.id = s.id " +
+            " AND s.enabled = 1 )" +
+            " INNER JOIN SubjectsEntity su   ON ( r.subject.id =  su.id  AND su.enabled = 1 )  ORDER BY r.id "
+    )
+    List<RatingDto> findAllRatings();
 }

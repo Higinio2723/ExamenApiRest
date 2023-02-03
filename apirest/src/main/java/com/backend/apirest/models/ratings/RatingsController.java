@@ -28,12 +28,19 @@ public class RatingsController {
     @Autowired
     RatingsService ratingsService;
 
-    @GetMapping("/ratings/students/{idStudent}")
-    public ResponseEntity<Object> findRatingsStudents(@PathVariable(name = "idStudent" , required = true)  Integer idStudent) {
+    @GetMapping("/ratings/students")
+    public ResponseEntity<Object> findRatingsStudents(@RequestParam(name = "idStudent" , required = false) Integer idStudent) {
 
         ResponseEntity<Object> result = null;
+        List<RatingDto> ratings =  null;
 
-        List<RatingDto> ratings = ratingsService.findByIdStudent(idStudent);
+        if(idStudent != null){
+            ratings = ratingsService.findByIdStudent(idStudent);
+        }else{
+            ratings = ratingsService.findByAll();
+        }
+
+
         List<RatingFormatDto> ratingFormatDtos = new ArrayList<>();
 
         ratings.forEach(data -> {
