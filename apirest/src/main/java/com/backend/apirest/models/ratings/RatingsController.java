@@ -143,5 +143,19 @@ public class RatingsController {
     }
 
 
+    @PostMapping("/ratings_det")
+    public ResponseEntity<Object> saveRatingDet(@Valid @RequestBody RatingsDataDto request)  {
+        ResponseEntity<Object> result = null;
+        ratingsService.save(request);
+
+        result = new ResponseEntity<>(GeneralDto.builder()
+                .success("ok")
+                .msg("calificacion registrada")
+                .build(), HttpStatus.OK);
+
+        return result;
+
+    }
+
 
     }
