@@ -37,7 +37,9 @@ public class ReportController {
 		try {
 			List<RatingDto> ratings = null;
 
-			if(idStudent != null){
+			logger.info("idStudent {}",idStudent);
+
+			if(idStudent != null ){
 				ratings = ratingsService.findByIdStudent(idStudent);
 			}else{
 				ratings = ratingsService.findByAll();

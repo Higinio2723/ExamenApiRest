@@ -46,7 +46,7 @@
 	</subDataset>
 	<parameter name="CompanyName" class="java.lang.String"/>
 	<parameter name="calificacionesData" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
-	<parameter name="promedio" class="java.lang.Double"/>
+<!--	<parameter name="promedio" class="java.lang.Double"/>-->
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
