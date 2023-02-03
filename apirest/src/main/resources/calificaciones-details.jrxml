@@ -220,21 +220,6 @@
 					</jr:column>
 				</jr:table>
 			</componentElement>
-			<staticText>
-				<reportElement x="0" y="160" width="100" height="30" forecolor="#030303" backcolor="#3794B0" uuid="b3177f94-edbe-41fe-9001-c34bd020a023"/>
-				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
-					<pen lineColor="#030303"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Promedio  = ]]></text>
-			</staticText>
-			<textField textAdjust="StretchHeight">
-				<reportElement x="100" y="160" width="100" height="30" uuid="a8ddf89e-e42c-4cbf-bf62-3d38ecbfa351"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{promedio}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 	<pageFooter>
