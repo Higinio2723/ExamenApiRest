@@ -14,7 +14,7 @@ public interface RatingsRepository extends JpaRepository<RatingsEntity, Integer 
 
 
     @Query(value = "SELECT new com.backend.apirest.models.ratings.dto.RatingDto(" +
-            " s.id, s.name, s.lastName , su.name , " +
+            " r.id, s.id, s.name, s.lastName , su.name , " +
             " r.qualification , r.registrationDate) " +
             " FROM RatingsEntity r INNER JOIN StudentsEntity s ON (r.student.id = s.id " +
             " AND s.enabled = 1 )" +

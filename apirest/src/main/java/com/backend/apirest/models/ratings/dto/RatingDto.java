@@ -10,6 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class RatingDto {
 
+   private Integer id_t_calificacion;
    private Integer id_t_usuario;
    private String nombre;
    private String apellido;

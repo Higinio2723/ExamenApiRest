@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class RatingsController {
@@ -39,6 +40,7 @@ public class RatingsController {
             String dataString = FormatUtil.formatDateToStrings(data.getFecha_registro());
 
             ratingFormatDtos.add(RatingFormatDto.builder()
+                            .id_calificacion(data.getId_t_calificacion())
                             .id_t_usuario(data.getId_t_usuario())
                             .nombre(data.getNombre())
                             .apellido(data.getApellido())
@@ -139,5 +141,7 @@ public class RatingsController {
         return result;
 
     }
+
+
 
     }

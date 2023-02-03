@@ -8,6 +8,7 @@ import lombok.*;
 @Data
 public class RatingFormatDto {
 
+   private Integer id_calificacion;
    private Integer id_t_usuario;
    private String nombre;
    private String apellido;
