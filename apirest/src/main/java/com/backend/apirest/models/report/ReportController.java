@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -30,12 +31,18 @@ public class ReportController {
 	RatingsService ratingsService;
 
 
-	@GetMapping("/report/student/{idStudent}")
-	public ResponseEntity<byte[]> getRecordReport(@PathVariable(name = "idStudent" , required = true)  Integer idStudent) {
+	@GetMapping("/report/student")
+	public ResponseEntity<byte[]> getRecordReport(@RequestParam(name = "idStudent" , required = false)  Integer idStudent) {
 
 		try {
+			List<RatingDto> ratings = null;
 
-			List<RatingDto> ratings = ratingsService.findByIdStudent(idStudent);
+			if(idStudent != null){
+				ratings = ratingsService.findByIdStudent(idStudent);
+			}else{
+				ratings = ratingsService.findByAll();
+			}
+
 			double  average = ValidationUtils.getAverage(ratings);
 			logger.info("####################### average {}",average);
 
