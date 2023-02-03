@@ -13,6 +13,10 @@ public class StudentDto {
 
     private Integer idStudent;
 
-    private String nombreCompleto;
+    private String nombre;
+
+    private String apellidoMaterno;
+
+    private String apellidoPaterno;
 
 }

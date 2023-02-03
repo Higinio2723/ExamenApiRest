@@ -43,7 +43,9 @@ public class StudentsController {
 
         data.put("student",StudentDto.builder()
                         .idStudent(student.getId())
-                        .nombreCompleto(student.getName().concat(" ").concat(student.getLastName().concat(" ").concat(student.getSecondLastName())))
+                        .nombre(student.getName())
+                        .apellidoMaterno(student.getLastName())
+                        .apellidoPaterno(student.getSecondLastName())
                 .build());
 
         result = new ResponseEntity<>(data, HttpStatus.OK);
@@ -63,7 +65,9 @@ public class StudentsController {
         students.forEach(student -> {
             studentDtos.add(StudentDto.builder()
                     .idStudent(student.getId())
-                    .nombreCompleto(student.getName().concat(" ").concat(student.getLastName().concat(" ").concat(student.getSecondLastName())))
+                    .nombre(student.getName())
+                    .apellidoMaterno(student.getLastName())
+                    .apellidoPaterno(student.getSecondLastName())
                     .build());
         });
         Map<String, List<StudentDto>> data = new HashMap();
