@@ -18,4 +18,6 @@ public interface IRatingsService {
 
     void save(RatingsDataDto ratingsDataDto);
 
+    void saveDet(RatingsDataDto ratingsDataDto);
+
 }

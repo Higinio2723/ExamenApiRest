@@ -1,6 +1,7 @@
 package com.backend.apirest.models.ratings.dto;
 
 import com.backend.apirest.models.students.dto.StudentDto;
+import com.backend.apirest.models.subjects.dto.SubjectDto;
 import lombok.*;
 
 @Getter
@@ -16,8 +17,9 @@ public class RatingsDataDto {
 
     private Integer idMateria;
 
-    private StudentDto studentDto;
+    private StudentDto alumno;
 
+    private SubjectDto materia;
 
     private Double calificacion;
 

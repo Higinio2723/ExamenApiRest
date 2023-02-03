@@ -75,4 +75,38 @@ public class RatingsService implements IRatingsService{
     }
 
 
+    @Override
+    @Transactional
+    public void saveDet(RatingsDataDto ratingsDataDto) {
+        logger.info("############### {}",ratingsDataDto);
+        Optional<SubjectsEntity> subjectData = subjectsRepository.findById(ratingsDataDto.getIdMateria());
+
+        StudentsEntity studentData = StudentsEntity.builder()
+                .name(ratingsDataDto.getAlumno().getNombre())
+                .lastName(ratingsDataDto.getAlumno().getApellidoMaterno())
+                .secondLastName(ratingsDataDto.getAlumno().getApellidoPaterno())
+                .enabled(1)
+                .build();
+
+        studentsRepository.save(studentData);
+
+//        SubjectsEntity subjectData = SubjectsEntity.builder()
+//                .name(ratingsDataDto.getMateria().getNombre())
+//                .enabled(1)
+//                .build();
+//
+//        subjectsRepository.save(subjectData);
+
+        logger.info("################ studentData {}",studentData);
+
+        RatingsEntity ratingsEntity = RatingsEntity.builder()
+                .student(studentData)
+                .subject(subjectData.get())
+                .qualification(ratingsDataDto.getCalificacion())
+                .build();
+
+        ratingsRepository.save(ratingsEntity);
+    }
+
+
 }

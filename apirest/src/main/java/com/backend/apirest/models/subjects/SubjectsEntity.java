@@ -18,8 +18,9 @@ import java.io.Serializable;
 @Table(name="t_materias")
 public class SubjectsEntity implements Serializable {
     @Id
-    @Column(name = "id_t_materias", columnDefinition = "serial")
-    @Generated(GenerationTime.INSERT)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_t_materias",unique=true, nullable = false)
     private Integer id;
 
     @Column(nullable = false, name = "nombre" , length = 80)
